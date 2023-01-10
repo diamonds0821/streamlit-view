@@ -6,6 +6,7 @@ st.write('#### 기간: 2023.01.01 - 2023.01.09 ')
 
 
 df = pd.read_csv('c:/data/230110.csv',thousands = ',')
+df
 #st.info('원본')
 #st.write(df)
 #df1 = df.replace(['현매', 'DC'],['매출','반품'])
