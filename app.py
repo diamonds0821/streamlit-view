@@ -1,12 +1,12 @@
 import pandas as pd
 import streamlit as st
-
-st.write('# 미다스하우징 데이터')
-st.write('#### 기간: 2023.01.01 - 2023.01.09 ')
-
-
 df = pd.read_csv('c:/data/230110.csv',thousands = ',')
-df
+
+#st.write('# 미다스하우징 데이터')
+#st.write('#### 기간: 2023.01.01 - 2023.01.09 ')
+st.info('미다스하우징 데이터')
+st.write(df)
+
 #st.info('원본')
 #st.write(df)
 #df1 = df.replace(['현매', 'DC'],['매출','반품'])
