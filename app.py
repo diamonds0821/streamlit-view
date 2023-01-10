@@ -9,4 +9,4 @@ df1 = df.replace(['현매', 'DC'],['매출','반품'])
 df2 = df1.drop(615)
 df3 = df2.astype({'수량':int})
 df4 = pd.pivot_table(df3, index='전표일자', columns='담당자', values=['총금액'], aggfunc='sum')
-df4
+st.write(df4)
