@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_csv('c:/data/230110.csv',thousands = ',')
 
 #st.write('# 미다스하우징 데이터')
 #st.write('#### 기간: 2023.01.01 - 2023.01.09 ')
 st.write('# 미다스하우징 데이터')
+
+df = pd.read_csv('c:/data/230110.csv',thousands = ',')
 st.write(df)
 
 #st.info('원본')
