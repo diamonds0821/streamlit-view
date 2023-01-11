@@ -2,14 +2,19 @@ import streamlit as st
 import pandas as pd
 
 
-#st.write('# 미다스하우징 데이터')
-#st.write('#### 기간: 2023.01.01 - 2023.01.09 ')
+st.write('# 미다스하우징 데이터')
+st.write('#### 기간: 2023.01.01 - 2023.01.09 ')
 st.write('# 미다스하우징 데이터')
 
 df = pd.read_csv('c:/data/230110.csv',thousands = ',')
-st.write(df)
 
+df1 = df.replace(['현매', 'DC'],['매출','반품'])
+df2 = df1.drop(615)
+df3 = pd.pivot_table(df2, index='전표일자', columns='구분', values=['총금액'], aggfunc='sum')
+
+st.write(df3)
 #st.info('원본')
+
 #st.write(df)
 #df1 = df.replace(['현매', 'DC'],['매출','반품'])
 #df2 = df1.drop(615)
